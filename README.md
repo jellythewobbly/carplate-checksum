@@ -1,2 +1,2 @@
-# carplate.github.io
+# carplate-checksum
 checksum calculator
