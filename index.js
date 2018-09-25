@@ -1,5 +1,7 @@
 const checksum = input => {
-	if (input.length > 7) return 'ERROR';
+	if (input.length > 7) return 'INVALID INPUT';
+	if (input.toUpperCase().match(/[A-Z]{1,3}/g).length > 1)
+		return 'INVALID INPUT';
 	let letters = input.toUpperCase().match(/^[A-Z]{1,3}/g)[0];
 	if (letters.length !== 2) {
 		letters = letters.length === 3 ? letters.slice(1) : letters;
@@ -40,9 +42,12 @@ const checksum = input => {
 };
 
 const calculate = () => {
-	const result = checksum(document.getElementById('input').value);
-	console.log(result);
-	document.getElementById('result').textContent = result;
+	try {
+		const result = checksum(document.getElementById('input').value);
+		document.getElementById('result').textContent = result;
+	} catch (e) {
+		document.getElementById('result').textContent = 'INVALID INPUT';
+	}
 };
 
 const input = document.getElementById('input');
