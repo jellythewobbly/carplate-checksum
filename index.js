@@ -1,4 +1,5 @@
 const checksum = input => {
+	input = input.trim();
 	if (input.length > 7) return 'INVALID INPUT';
 	if (input.toUpperCase().match(/[A-Z]{1,3}/g).length > 1)
 		return 'INVALID INPUT';
