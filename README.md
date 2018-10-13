@@ -1,4 +1,4 @@
 # carplate-checksum
-# Check out [a link](https://jayl.io)
+# Check it out [jayl.io](https://jayl.io)
 Singapore carplate checksum calculator
 
